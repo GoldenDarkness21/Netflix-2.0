@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(29, 29, 29);
+  }
+  
+  header {
+    background-color: #141414;
+    color: #ffffff;
+    padding: 1rem 0;
+  }
+
+  
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 1rem 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+  }
+
+  .featured-background {
+    background-image: url("Fondo.jpeg"); 
+}
+  .main-header.scrolled {
+    background-color: rgba(20, 20, 20, 0.8);
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20rem;
+  }
+  
+  .profile{
+    cursor: pointer;
+    position: absolute;
+    left: 95%;
+
+  }
+
+  .options{
+    cursor: pointer;
+    position: absolute;
+    left: 3%;
+  }
+
+  .menu ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    left: -90%;
+  }
+  
+  .menu li {
+    margin-right: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .menu li:hover {
+    color: #e50914;
+
+  }
+  
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    margin-top: 60px;
+    margin-left: 50px;
+    
+  }
+  
+  .section h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: white;
+    
+    
+  }
+  
+  .peliculas-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    color: white;
+    gap: 10px;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap; 
+    border-radius: 10px;
+    
+
+  }
+
+  .rate {
+    color: white;
+    margin-left: -250px;
+    
+  }
+  
+  .peliculas-item {
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 320px;
+    flex: 0 0 auto;
+    margin-right: 100px;
+
+  }
+
+
+.peliculas-item img {
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+ }
+  
+.featured-section {
+  position: relative;
+  height: 650px; 
+  overflow: hidden;
+}
+
+.featured-background img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.featured-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: #ffffff;
+}
+
+.featured-content h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.featured-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.featured-content p {
+  font-size: 18px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.featured-content h1:hover{
+  color: red;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.age p {
+  font-size: 16px;
+  margin-right: 20px;
+  position: absolute;
+  left: 210px;
+  top: 165px;
+}
+
+.textrat {
+  position: absolute;
+  left: 230px;
+  top: 20px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.buttons :hover{
+  color: #e50914;
+  cursor: pointer;
+  transition: color 0.3s;
+  border: 1px solid red;
+  transition: border-color 0.2s;
+}
+
+.save-button {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.container{
+
+  width: 400px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -34px;
+  margin-left: -85px;
+  
+}
+
+.rate{
+  margin-top: -10px;
+  margin-left: 10px;
+
+}
+
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 10px;
+  color: #444;
+  padding: 3px;
+  float: right;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+
+input:checked ~ label{
+  color: #fd4;
+}
+
+
+input:checked ~ form{
+  display: block;
+}
+
